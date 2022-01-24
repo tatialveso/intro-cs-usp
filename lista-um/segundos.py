@@ -1,8 +1,13 @@
 total = int(input("Por favor, entre com o número de segundos que deseja converter: "))
 
-totalInDays = round(total / 86400)
-totalInHours = round(total / 3600)
-totalInMinutes = round(total / 60)
-totalInSeconds = round(total % 60)
+totalInDays = total // 86400
+totalInHours = total // 3600
+totalInSeconds = total % 3600
+totalInMinutes = totalInSeconds // 60
+restInSeconds = totalInSeconds % 60
 
-print(totalInDays, "dias,", totalInHours, "horas,", totalInMinutes, "minutos e", totalInSeconds, "segundos.")
+if(totalInHours >= 24) :
+    totalInDays = int(totalInHours / 24)
+    totalInHours = int(totalInHours % 24)
+
+print(totalInDays, "dias,", totalInHours, "horas,", totalInMinutes, "minutos e", restInSeconds, "segundos.")

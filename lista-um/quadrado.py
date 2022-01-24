@@ -4,4 +4,4 @@ per = square * 4
 area = square * square
 
 
-print("perímero: ", per, "- área:", area)
+print("perímero:", per, "- área:", area)
